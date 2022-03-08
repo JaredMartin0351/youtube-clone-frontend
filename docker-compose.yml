@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  prod:
+    container_name: youtube-clone-frontend
+    image: jaredmartin0351/ytc-front
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+    # volumes:
+    #   - './:/app'
+    #   - '/app/node_modules'
+
+    ports:
+      - "80:80"
